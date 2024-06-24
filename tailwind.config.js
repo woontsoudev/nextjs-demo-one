@@ -10,8 +10,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: '#4CAF50',
+        'dark-primary': '#388E3C',
+      },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
+      },
+      backgroundImage: {
+        'pets-background': 'url("../assets/pets-bg.webp")',
       },
     },
   },

@@ -26,6 +26,20 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+@layer components {
+  /* components/image-slideshow/image-slideshow.js */
+  .slideshow {
+    @apply relative w-full h-full overflow-hidden shadow-[0_0_0.5rem_rgba(0,0,0,0.5)] rounded-lg;
+  }
+  .slideshow img {
+    @apply w-full h-full object-cover absolute opacity-0 translate-x-[-1rem] rotate-[-5deg] transition-all duration-[0.5s] ease-[ease-in-out] scale-110 left-0 top-0;
+  }
+  .slideshow .active {
+    @apply z-[1] opacity-100 translate-x-0 rotate-[0] scale-100;
+  }
+  /* end components/image-slideshow/image-slideshow.js */
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

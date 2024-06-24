@@ -1,10 +1,5 @@
 import { StackedLayout } from './shared/stacked-layout';
-import {
-  Navbar,
-  NavbarItem,
-  NavbarSection,
-  NavbarDivider,
-} from './shared/navbar';
+import { Navbar, NavbarItem, NavbarSection } from './shared/navbar';
 import {
   Sidebar,
   SidebarBody,
@@ -28,7 +23,6 @@ export default function RootLayout({ children }) {
       navbar={
         <Navbar>
           <Avatar src={dogLogo} width={60} height={60} />
-          <NavbarDivider className="max-lg:hidden" />
           <NavbarSection className="max-lg:hidden">
             {navItems.map(({ label, url }) => (
               <NavbarItem key={label} href={url}>
